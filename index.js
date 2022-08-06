@@ -644,7 +644,7 @@ client.on("message", async message =>{
 }
     
     
-if(cmd === `${prefix}cc`){
+if(cmd === `${prefix}cca`){
     if (message.member.hasPermission('MANAGE_MESSAGES')) {
       message.channel.messages.fetch().then((results) => {
         message.channel.bulkDelete(results)
@@ -652,7 +652,7 @@ if(cmd === `${prefix}cc`){
     }
   }    
 
-    if(cmd === `${prefix}cca`){
+    if(cmd === `${prefix}cc`){
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             if(message.guild.member(client.user).hasPermission("ADMINSTRATOR")){
     
