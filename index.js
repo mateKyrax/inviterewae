@@ -598,6 +598,18 @@ client.on("message", async message =>{
     })
 
 
+if(cmd === `${prefix}tgfok`){
+        if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Nincs jogod használni ezt parancsot!❌")
+        let fdagfdaGDGAgdgdsg = message.mentions.members.first()
+        message.channel.send(`<@${fdagfdaGDGAgdgdsg.id}> A beküldött űrlapod alapján alkalmasnak találtunk egy szóbeli meghallgatásra, kérlek nyiss egy ticketet!`)
+    }
+
+
+    if(cmd === `${prefix}tgfnem`){
+        if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Nincs jogod használni ezt parancsot!❌")
+        let fdagfdaGDGAgdgdsg = message.mentions.members.first()
+        message.channel.send(`<@${fdagfdaGDGAgdgdsg.id}> A beküldött űrlapod alapján sajnos alkalmatlannak találtunk a pozíció betöltésére!`)
+    }
 
 
 
