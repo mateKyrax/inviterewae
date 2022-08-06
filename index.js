@@ -49,7 +49,7 @@ client.on("message", async message =>{
     if(message.channel.type === "dm") return;
 
     
-    if(cmd === ${prefix}membercount){
+    if(cmd === `${prefix}membercount`){
     message.channel.bulkDelete(1);
 
     let memberEmbed = new Discord.MessageEmbed()
