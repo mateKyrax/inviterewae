@@ -48,6 +48,22 @@ client.on("message", async message =>{
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
+    
+    if(cmd ===${prefix}membercount){
+    message.channel.bulkDelete(1);
+
+    let memberEmbed = new Discord.MessageEmbed()
+    .setTitle("MemberCount")
+    .setColor("YELLOW")
+    .setDescription(Az **${message.guild.name}** szerveren **${message.guild.memberCount}** ember van bent!)
+    .setTimestamp(message.createdAt)
+    .setFooter(message.guild.name)
+
+    message.channel.send(memberEmbed);
+
+}
+          
+    
 let hirdetésszavak = [
     "discord.gg/"
 ]
