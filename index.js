@@ -23,7 +23,7 @@ const ms = require("ms");
 
 
 
-let botname = "Citrom"
+let botname = "Invite Reward"
 
 client.on("ready", async() => {
     console.log(`${client.user.username} elindult!`)
@@ -48,7 +48,20 @@ client.on("message", async message =>{
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
+let hirdetésszavak = [
+    "https:",
+    "discord.gg/"
+]
+let sikeres = false;
 
+for (var a in hirdetésszavak) {
+    if(message.content.toLocaleLowerCase().includes(hirdetésszavak[a].toLowerCase())) sikeres = true
+}
+
+if(sikeres) {
+    message.delete();
+    message.author.send("Itt tilos a hirdetés!");
+}
 
 if(cmd === `${prefix}tgfok`){
         message.delete()
