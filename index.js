@@ -49,7 +49,6 @@ client.on("message", async message =>{
     if(message.channel.type === "dm") return;
 
 let hirdetésszavak = [
-    "https:",
     "discord.gg/"
 ]
 let sikeres = false;
