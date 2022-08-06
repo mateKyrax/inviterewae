@@ -654,7 +654,7 @@ if(cmd === `${prefix}cc`){
 
     if(cmd === `${prefix}chattörlés`){
         if(message.member.hasPermission("MANAGE_MESSAGES")){
-            if(message.guild.member(bot.user).hasPermission("ADMINSTRATOR")){
+            if(message.guild.member(client.user).hasPermission("ADMINSTRATOR")){
     
                 if(args[0] && isNaN(args[0]) && args[0] <= 100 || 0 < args[0] && args[0] < 101){
     
