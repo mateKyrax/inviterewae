@@ -652,7 +652,7 @@ if(cmd === `${prefix}cc`){
     }
   }    
 
-    if(cmd === `${prefix}chattörlés`){
+    if(cmd === `${prefix}cca`){
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             if(message.guild.member(client.user).hasPermission("ADMINSTRATOR")){
     
