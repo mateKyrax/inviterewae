@@ -55,7 +55,7 @@ client.on("message", async message =>{
     let memberEmbed = new Discord.MessageEmbed()
     .setTitle("MemberCount")
     .setColor("YELLOW")
-    .setDescription(Az **${message.guild.name}** szerveren **${message.guild.memberCount}** ember van bent!)
+    .setDescription(`Az **${message.guild.name}** szerveren **${message.guild.memberCount}** ember van bent!`)
     .setTimestamp(message.createdAt)
     .setFooter(message.guild.name)
 
