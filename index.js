@@ -642,7 +642,33 @@ client.on("message", async message =>{
         }
     
 }
+    
+    
+if(cmd === `${prefix}cc`){
+    if (message.member.hasPermission('MANAGE_MESSAGES')) {
+      message.channel.messages.fetch().then((results) => {
+        message.channel.bulkDelete(results)
+      })
+    }
+  }    
 
+    if(cmd === `${prefix}chattörlés`){
+        if(message.member.hasPermission("MANAGE_MESSAGES")){
+            if(message.guild.member(bot.user).hasPermission("ADMINSTRATOR")){
+    
+                if(args[0] && isNaN(args[0]) && args[0] <= 100 || 0 < args[0] && args[0] < 101){
+    
+                    message.channel.send(`${Math.round(args[0])}`)
+                    message.channel.bulkDelete(Math.round(args[0]))
+    
+            } else {
+                message.reply(`Használat: ${prefix}chattörlés <1-100>`)
+            }
+                
+            } else message.reply("A botnak nincsen Adminisztrációs joga")
+    
+            } else message.reply("Ehhez nincs jogod")
+        }    
     
 if(cmd === `${prefix}howgay`){
 let howgay_szam = Math.floor(Math.random()*100 + 1);
