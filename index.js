@@ -5,7 +5,7 @@ const superagent = require('superagent');
 const randomPuppy = require('random-puppy');
 var weather = require('weather-js');
 const CoinGecko = require('coingecko-api');
-
+const ms = require("ms");
 
 const { Player } = require("discord-player");
 const player = new Player(client);
@@ -17,7 +17,6 @@ client.player = player;
 
 
 const fs = require("fs");
-const ms = require("ms");
 
 //////////////////////////////////////////////////////////
 
