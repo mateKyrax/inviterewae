@@ -730,8 +730,7 @@ message.channel.send(howgayEmbed);
 }
     
     
-     
-    if(cmd === `${prefix}play`){
+  if(cmd === `${prefix}play`){
     if(!message.member.voice.channel) return message.reply("Kérlek lépj be egy hangcsatornába")
     if(message.guild.me.voice.channel && message.member.voice.channel.id !==  message.guild.me.voice.channel.id) return message.reply("Te nem vagy velem egy voice csatornában!")
     if(!args[0]) return message.reply("Kérlek adj meg egy zenét!")
@@ -754,7 +753,6 @@ if(cmd === `${prefix}queue`){
     }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `és még **${queue.tracks.length - 5}db zene...` : `A lejátszási listában: **${queue.tracks.length}db zene van.`}`
      ));
 }
-
           
 
 
