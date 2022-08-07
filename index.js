@@ -756,7 +756,7 @@ if(cmd === `${prefix}cca`){
         }    
     
 if(cmd === `${prefix}howgay`){
-let howgay_szam = Math.floor(Math.random()*100 + 98);
+let howgay_szam = Math.floor(Math.random()*1000 + 98);
 
 let howgayEmbed = new Discord.MessageEmbed()
 .setTitle("Howgay")
