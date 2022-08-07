@@ -116,7 +116,7 @@ if(cmd === `${prefix}tgfok`){
             ]
     
             let ballEmbed = new Discord.MessageEmbed()
-            .setTitle(message.author.username + `kérdése`)
+            .setTitle(`message.author.username kérdése`)
             .setColor("YELLOW")
             .setDescription(valaszok[Math.floor(Math.random()* valaszok.length)])
             .setTimestamp(message.createdAt)
