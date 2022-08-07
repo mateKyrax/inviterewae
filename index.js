@@ -308,7 +308,6 @@ if(cmd ===`${prefix}kérdés`){
         .addField(`${prefix}tgfok`, "tgf elfogadása")
         .addField(`${prefix}tgfnem`, "tgf elutasítása")
         .addField(`${prefix}mute <@név> <3m, 5m, 15m, 30m, 1h>`, "Ember mutolása (meghatározott időre!)")
-        .addField("Ha valami elírást/helyesírási hibát tapasztalsz akkor keresd fel --> matebajnok#8576-ot", "^^^")
         .addField(`${prefix}embedsay`, "embedsay-be fog írni a bot (amit te írtál bele)")
         .addField(`${prefix}btc`, "bitcoin jelenlegi árfolyama (Forintba)")
         .addField(`${prefix}luck`, "Kiír egy szerencse százalékot!")
@@ -322,6 +321,7 @@ if(cmd ===`${prefix}kérdés`){
         .addField(`${prefix}howgay`, "Kiír egy random százélok, hogy mennyire vagy meleg")
         .addField(`${prefix}play`, "Ha bent vagy egy csatornában akkor belép a bot és amilyen zenét megadtál azt lejátsza")
         .addField(`${prefix}queue`, "Kiírja milyen zenék vannak várólistán")
+        .addField("Ha valami elírást/helyesírási hibát tapasztalsz akkor keresd fel --> matebajnok#8576-ot", "^^^")
         .setTimestamp(message.createdAt)
         .setFooter(botname)
     
