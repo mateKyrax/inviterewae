@@ -730,7 +730,7 @@ message.channel.send(howgayEmbed);
 }
     
     
-  if(cmd === `${prefix}play`){
+ if(cmd === `${prefix}play`){
     if(!message.member.voice.channel) return message.reply("Kérlek lépj be egy hangcsatornába")
     if(message.guild.me.voice.channel && message.member.voice.channel.id !==  message.guild.me.voice.channel.id) return message.reply("Te nem vagy velem egy voice csatornában!")
     if(!args[0]) return message.reply("Kérlek adj meg egy zenét!")
@@ -739,21 +739,6 @@ message.channel.send(howgayEmbed);
 
     message.channel.send(`Bekapcsoltál egy nagyon kemény zenét`);
 }
-if(cmd === `${prefix}queue`){
-    if(!message.member.voice.channel) return message.reply("Kérlek lépj be egy hangcsatornába")
-    if(message.guild.me.voice.channel && message.member.voice.channel.id !==  message.guild.me.voice.channel.id) return message.reply("Te nem vagy velem egy voice csatornában!")
-
-    const queue = client.player.getQueue(message);
-
-    if(!client.player.getQueue(message)) return message.reply("A várólistán nincs egy zene sem")
-
-    message.channel.send(`**Várólista - ${message.guild.name}\nJelenleg ${queue.playing.title} | ${queue.playing.author}\n\n` + (queue.tracks.map((track, i) => {
-        return `**#${i + 1}** - ${track.title} | ${track.author} (A zenét kérte: ${track.requestedBy.username})`
-
-    }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `és még **${queue.tracks.length - 5}db zene...` : `A lejátszási listában: **${queue.tracks.length}db zene van.`}`
-     ));
-}
-          
 
 
       
