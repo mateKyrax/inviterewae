@@ -756,12 +756,12 @@ if(cmd === `${prefix}cca`){
         }    
     
 if(cmd === `${prefix}howgay`){
-let howgay_szam = Math.floor(Math.random()*1000 + 98);
+let howgay_szam = Math.floor(Math.random()*100 + 1);
 
 let howgayEmbed = new Discord.MessageEmbed()
 .setTitle("Howgay")
 .setColor("RANDOM")
-.setDescription(`:rainbow_flag: Ennyire vagy meleg ${howgay_szam}%`)
+.setDescription(`:rainbow_flag: Ennyire vagy meleg ${howgay_szam}%\n de amúgy szebi nagyon buzi`)
 .setTimestamp(message.createdAT)
 .setFooter(message.author.username)
 
