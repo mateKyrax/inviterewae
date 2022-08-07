@@ -179,14 +179,6 @@ if(cmd ===`${prefix}kérdés`){
 
     }
 
-    if(cmd ===`${prefix}avatar`){
-
-        let teszt_1 = new Discord.MessageEmbed()
-        .setImage(message.kick_user.displayAvatarURL({dynamic: true}))
-    
-        message.channel.send(teszt_1);
-    }
-
 
     if(cmd ===`${prefix}ban`){
 
@@ -273,7 +265,7 @@ if(cmd ===`${prefix}kérdés`){
         .setTitle(":small_blue_diamond:  Nyereményjáték!")
         .setDescription(`:small_blue_diamond:  Nyeremény: **${tárgy}**`)
         .addField(":small_blue_diamond:  `Időtartam:`" + ms(ms(idő), {long: true}), ":small_blue_diamond:  `Igények:`" +  igény)
-        .setFooter("A jelentkezéshe reagálj ezzel: 🎉")
+        .setFooter("A jelentkezéshez reagálj ezzel: 🎉")
         var embedSend = await message.channel.send(Gembed);
         embedSend.react("🎉");
 
@@ -305,7 +297,31 @@ if(cmd ===`${prefix}kérdés`){
         let helpEmbed = new Discord.MessageEmbed()
         .setColor("YELLOW")
         .setTitle("Segítség")
-        .addField("`\`Kategóriák:\n fun\n moderációs\n egyéb\``")
+        .addField("Parancsok:", "˘˘˘")
+        .addField(`${prefix}giveaway`, "Nyereményjáték létrehozása! (/giveaway (idő) nyereményjáték tárgya).")
+        .addField(`${prefix}membercount`, "Megmutattja mennyi játékos található a szerveren!")
+        .addField(`${prefix}javaslat`, "Leadja a szerverre a javaslatodat! (/javaslat [ötleted]).")
+        .addField(`${prefix}chattörlés`, "1 és 100 között törli az üzeneteket (/chattörlés 65) töröl 65 üzenettet.")
+        .addField(`${prefix}kick <@név>`, "Ember kickelése.")
+        .addField(`${prefix}ban <@név>`, "Ember bannolása.")
+        .addField(`${prefix}weather`, "lekéri a város időjárását (/weather Budapest).")
+        .addField(`${prefix}tgfok`, "tgf elfogadása")
+        .addField(`${prefix}tgfnem`, "tgf elutasítása")
+        .addField(`${prefix}mute <@név> <3m, 5m, 15m, 30m, 1h>`, "Ember mutolása (meghatározott időre!)")
+        .addField("Ha valami elírást/helyesírási hibát tapasztalsz akkor keresd fel --> matebajnok#8576-ot", "^^^")
+        .addField(`${prefix}embedsay`, "embedsay-be fog írni a bot (amit te írtál bele)")
+        .addField(`${prefix}btc`, "bitcoin jelenlegi árfolyama (Forintba)")
+        .addField(`${prefix}luck`, "Kiír egy szerencse százalékot!")
+        .addField(`${prefix}kérdés`, "Ha valamit kérdezel a bottol add egy random választ!")
+        .addField(`${prefix}meme`, "Lekér egy random mémet")
+        .addField(`${prefix}report`, "Játékos jelentése")
+        .addField(`${prefix}roles`, "Reakció rangok lekérése")
+        .addField(`${prefix}say`, "A bot nevében írsz")
+        .addField(`${prefix}verify`, "Kiküldi a fehérlistában lévő üzenetet")
+        .addField(`${prefix}cca`, "Teljes beszélgetés törlése")
+        .addField(`${prefix}howgay`, "Kiír egy random százélok, hogy mennyire vagy meleg")
+        .addField(`${prefix}play`, "Ha bent vagy egy csatornában akkor belép a bot és amilyen zenét megadtál azt lejátsza")
+        .addField(`${prefix}queue`, "Kiírja milyen zenék vannak várólistán")
         .setTimestamp(message.createdAt)
         .setFooter(botname)
     
