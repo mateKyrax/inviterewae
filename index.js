@@ -26,7 +26,7 @@ const fs = require("fs");
 
 
 
-let botname = "Invite Reward"
+let botname = "InviteReward"
 
 client.on("ready", async() => {
     console.log(`${client.user.username} elindult!`)
