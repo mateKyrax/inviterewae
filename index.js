@@ -761,7 +761,7 @@ let howgay_szam = Math.floor(Math.random()*100 + 1);
 let howgayEmbed = new Discord.MessageEmbed()
 .setTitle("Howgay")
 .setColor("RANDOM")
-.setDescription(`:rainbow_flag: Ennyire vagy meleg ${howgay_szam}%\n de amúgy szebi nagyon buzi`)
+.setDescription(`:rainbow_flag: Ennyire vagy meleg ${howgay_szam}%`)
 .setTimestamp(message.createdAT)
 .setFooter(message.author.username)
 
