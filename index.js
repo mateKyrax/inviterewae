@@ -69,7 +69,7 @@ client.on("message", async message =>{
     if(message.guild.me.voice.channel && message.member.voice.channel.id !==  message.guild.me.voice.channel.id) return message.reply(`Te nem vagy velem egy voice csatornában!`)
     if(!args[0]) return message.reply(`Kérlek adj meg egy zenét!`)
 
-    client.player.play(message, args.join( ), {firstResult true});
+    client.player.play(message, args.join( ), {firstResult: true});
 
     message.channel.send(`Bekapcsoltál egy nagyon kemény zenét`);
 }
