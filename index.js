@@ -65,22 +65,6 @@ client.on("message", async message =>{
     message.channel.send(memberEmbed);
 
 }
-    
-   
-    
-let hirdetésszavak = [
-    "discord.gg/"
-]
-let sikeres = false;
-
-for (var a in hirdetésszavak) {
-    if(message.content.toLocaleLowerCase().includes(hirdetésszavak[a].toLowerCase())) sikeres = true
-}
-
-if(sikeres) {
-    message.delete();
-    message.author.send("Itt tilos a hirdetés!");
-}
 
 if(cmd === `${prefix}tgfok`){
         message.delete()
