@@ -27,6 +27,7 @@
     "random-puppy": "^1.1.0",
     "reddit": "^1.2.1",
     "reddit.images": "^1.0.7",
+    "srod-v2": "^1.0.2",
     "superagent": "^8.0.0",
     "weather": "^1.0.4",
     "weather-js": "^2.0.0"
