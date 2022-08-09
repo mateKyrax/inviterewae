@@ -12,6 +12,7 @@
     "@discordjs/opus": "^0.8.0",
     "ascii-table": "^0.0.9",
     "bitcoin": "^3.0.3",
+    "catsndogs": "^1.0.5",
     "coingecko-api": "^1.0.10",
     "discord-button": "^1.0.3",
     "discord-buttons": "^4.0.0-deprecated",
