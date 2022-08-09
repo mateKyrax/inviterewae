@@ -61,7 +61,7 @@ client.on("message", async message =>{
        
 
         if (args[0] && user2) {
-        const Data = await srod.Wasted({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+        const Data = await srod.Wasted({Image: user2.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
      
         message.channel.send(Data);
          } else {
@@ -109,7 +109,7 @@ message.channel.send(Data);
        
 
         if (args[0] && user1) {
-        const Data = await srod.Gay({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+        const Data = await srod.Gay({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
      
         message.channel.send(Data);
          } else {
