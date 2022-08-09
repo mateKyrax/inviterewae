@@ -8,6 +8,7 @@ const CoinGecko = require('coingecko-api');
 const ms = require("ms");
 const color = "RANDOM"
 const srod = require("srod-v2");
+const random = require("catsndogs");
 
 const { Player } = require("discord-player");
 const player = new Player(client);
@@ -103,6 +104,16 @@ message.channel.send(Data);
 
     
     
+     if(cmd ===`${prefix}cat`){
+
+        random.cat().then(url => message.channel.send(url)).catch(err => console.log(err.message));
+
+     }
+
+     if(cmd ===`${prefix}dog`){
+
+        random.dog().then(url => message.channel.send(url)).catch(err => console.log(err.message));
+     }
     
     if(cmd ===`${prefix}gay`){
         const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
