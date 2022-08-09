@@ -54,6 +54,55 @@ client.on("message", async message =>{
     if(message.channel.type === "dm") return;
 
     
+    
+ if(cmd ===`${prefix}wasted`){
+
+        const user2 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+       
+
+        if (args[0] && user2) {
+        const Data = await srod.Wasted({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+     
+        message.channel.send(Data);
+         } else {
+             let wasted_Embed = new Discord.MessageEmbed()
+             .setAuthor("Hiba | Helyes Használat")
+             .setColor("YELLOW")
+             .setDescription(`\`.wasted @<user>\``)
+             .setTimestamp(message.createdAt)
+             .setFooter(message.author.username)
+     
+             message.channel.send(wasted_Embed);
+             } 
+     }
+     
+     
+       if(cmd ===`${prefix}glass`){
+
+const user = message.mentions.users.first() || message.client.users.cache.get(args[0])
+       
+
+if (args[0] && user) {
+const Data = await srod.Glass({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+
+message.channel.send(Data);
+ } else {
+     let wasted_Embed = new Discord.MessageEmbed()
+     .setAuthor("Hiba | Helyes használat")
+     .setColor("YELLOW")
+     .setDescription(`\`.glass @<user>\``)
+     .setTimestamp(message.createdAt)
+     .setFooter(message.author.username)
+
+     message.channel.send(wasted_Embed);
+     } 
+
+
+
+    }
+
+    
+    
     if(cmd === `${prefix}membercount`){
     message.channel.bulkDelete(1);
 
