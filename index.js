@@ -6,6 +6,8 @@ const randomPuppy = require('random-puppy');
 var weather = require('weather-js');
 const CoinGecko = require('coingecko-api');
 const ms = require("ms");
+const color = "RANDOM"
+const srod = require("srod-v2");
 
 const { Player } = require("discord-player");
 const player = new Player(client);
@@ -81,6 +83,35 @@ if(cmd === `${prefix}tgfok`){
         message.channel.send(`<@${fdagfdaGDGAgdgdsg.id}> A beküldött űrlapod alapján sajnos alkalmatlannak találtunk a pozíció betöltésére!❌`)
     }
 
+    
+    if(cmd ===`${prefix}howgay`){
+
+    let gay__szam = Math.floor(Math.random()*100 + 1);
+    let gay_user = message.mentions.members.first();
+
+    if(args[0] && gay_user){
+
+        let gayEmbed = new Discord.MessageEmbed()
+        .setTitle(`Howgay`)
+        .setColor("RANDOM")
+        .setDescription(`:rainbow_flag:  **${gay_user.user.username}** Ennyire meleg: ${gay__szam}%`)
+        .setTimestamp(message.createdAt)
+        .setFooter("InviteReward")
+
+        message.channel.send(gayEmbed);
+    } else {
+        let gay2Embed = new Discord.MessageEmbed()
+        .setTitle("Howgay")
+        .setColor("RANDOM")
+        .setDescription(`:rainbow_flag: Ennyire vagy meleg: ${gay__szam}%`)
+        .setTimestamp(message.createdAt)
+        .setFooter("InviteReward")
+
+        message.channel.send(gay2Embed);
+}
+    
+
+}
 
 
 
@@ -313,22 +344,32 @@ if(cmd ===`${prefix}kérdés`){
        
     } 
 
-    if(cmd ===`${prefix}luck`){
-        let luck_szam = Math.floor(Math.random()*100 + 1);
+if(cmd ===`${prefix}luck`){
 
-        let luckEmbed = new Discord.MessageEmbed()
-        .setAuthor("Luck")
-        .setTitle(`:four_leaf_clover: Ennyire vagy szerencsés: ${luck_szam}%`)
-        .setColor("YELLOW")
-        .setTimestamp(message.createdAt)
-        .setFooter(message.author.username)
+    let luck__szam = Math.floor(Math.random()*100 + 1);
+    let luck_user = message.mentions.members.first();
+    if(args[0] && luck_user){
 
-        message.channel.send(luckEmbed);
+    let luck2Embed = new Discord.MessageEmbed()
+    .setTitle("Luck")
+    .setColor("GREEN")
+    .setDescription(`:four_leaf_clover: ${luck_user.user.username} ennyire szerencsés: ${luck__szam}`)
+    .setTimestamp(message.createdAt)
+    .setFooter(botname)
 
+    message.channel.send(luck2Embed);
+} else {
+    let luck1Embed = new Discord.MessageEmbed()
+    .setTitle("Luck")
+    .setColor("GREEN")
+    .setDescription(`:four_leaf_clover: ennyire vagy szerencsés: ${luck__szam}`)
+    .setTimestamp(message.createdAt)
+    .setFooter(botname)
 
+    message.channel.send(luck1Embed);
+}
 
-
-    }
+}
 
     if(cmd ===`${prefix}meme`){
         const subreddits = ["dankmeme", "meme", "me_irl"]
@@ -754,19 +795,6 @@ if(cmd === `${prefix}cca`){
     
             } else message.reply("Ehhez nincs jogod")
         }    
-    
-if(cmd === `${prefix}howgay`){
-let howgay_szam = Math.floor(Math.random()*100 + 1);
-
-let howgayEmbed = new Discord.MessageEmbed()
-.setTitle("Howgay")
-.setColor("RANDOM")
-.setDescription(`:rainbow_flag: Ennyire vagy meleg ${howgay_szam}%`)
-.setTimestamp(message.createdAT)
-.setFooter(message.author.username)
-
-message.channel.send(howgayEmbed);
-}
     
     
  if(cmd === `${prefix}play`){
