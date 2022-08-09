@@ -103,6 +103,32 @@ message.channel.send(Data);
 
     
     
+    
+    if(cmd ===`${prefix}gay`){
+        const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+       
+
+        if (args[0] && user1) {
+        const Data = await srod.Gay({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+     
+        message.channel.send(Data);
+         } else {
+             let wasted_Embed = new Discord.MessageEmbed()
+             .setAuthor("Hiba | Helyes HasznÃ¡lat")
+             .setColor("YELLOW")
+             .setDescription(`\`.gay @<user>\``)
+             .setTimestamp(message.createdAt)
+             .setFooter(message.author.username)
+     
+             message.channel.send(wasted_Embed);
+             } 
+     }
+      
+    
+    
+    
+    
+    
     if(cmd === `${prefix}membercount`){
     message.channel.bulkDelete(1);
 
