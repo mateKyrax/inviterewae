@@ -103,6 +103,31 @@ message.channel.send(Data);
     }
 
     
+    if(cmd === `${prefix}szavazás`){
+        if(message.member.hasPermission("MANAGE_MESSAGES")){
+            if(message.guild.member(client.user).hasPermission("ADMINSTRATOR")){
+
+        if(args[0]){
+            let he_embed = new Discord.MessageEmbed()
+                .setAuthor(message.author.tag + `| Szavazást indított!`)
+                .setDescription(args.join(" "))
+                .setColor("YELLOW")
+                .setTimestamp(message.createdAt)
+                .setFooter(client.user.username)
+
+                message.channel.send(he_embed).then(async msg =>{
+                    await msg.react("✅")
+                    await msg.react("❌")
+                })
+
+            } else message.reply("A botnak nincsen Adminisztrációs joga")
+    
+            } else message.reply("Ehhez nincs jogod")
+
+        } else {
+            message.reply("Kérlek add meg a szavazást!")
+        }
+    }
     
      if(cmd ===`${prefix}cat`){
 
