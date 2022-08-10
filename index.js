@@ -69,7 +69,7 @@ client.on("message", async message =>{
              let wasted_Embed = new Discord.MessageEmbed()
              .setAuthor("Hiba | Helyes Használat")
              .setColor("YELLOW")
-             .setDescription(`\`.wasted @<user>\``)
+             .setDescription(`\`!wasted @<user>\``)
              .setTimestamp(message.createdAt)
              .setFooter(message.author.username)
      
@@ -91,7 +91,7 @@ message.channel.send(Data);
      let wasted_Embed = new Discord.MessageEmbed()
      .setAuthor("Hiba | Helyes használat")
      .setColor("YELLOW")
-     .setDescription(`\`.glass @<user>\``)
+     .setDescription(`\`!glass @<user>\``)
      .setTimestamp(message.createdAt)
      .setFooter(message.author.username)
 
@@ -151,9 +151,9 @@ message.channel.send(Data);
         message.channel.send(Data);
          } else {
              let wasted_Embed = new Discord.MessageEmbed()
-             .setAuthor("Hiba | Helyes HasznÃ¡lat")
+             .setAuthor("Hiba | Helyes Használat")
              .setColor("YELLOW")
-             .setDescription(`\`.gay @<user>\``)
+             .setDescription(`\`!gay @<user>\``)
              .setTimestamp(message.createdAt)
              .setFooter(message.author.username)
      
@@ -292,7 +292,7 @@ if(cmd ===`${prefix}kérdés`){
             }
         } else { let asd2 = new Discord.MessageEmbed()
         .setAuthor("HIBA")
-        .setColor("RED")
+        .setColor("YELLOW")
         .setDescription("Neked ehhez nincsen jogod!")
         .setTimestamp(message.createdAt)
         .setFooter(message.author.username)
