@@ -104,6 +104,7 @@ message.channel.send(Data);
 
     
     if(cmd === `${prefix}szavazás`){
+        message.delete()
         if(message.member.hasPermission("MANAGE_MESSAGES")){
             if(message.guild.member(client.user).hasPermission("ADMINSTRATOR")){
 
