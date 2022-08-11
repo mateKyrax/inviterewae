@@ -523,61 +523,65 @@ if(cmd ===`${prefix}luck`){
         message.channel.send(MemeEmbed)
     }
 
-    if(cmd ===`${prefix}mute`){
-         let mute_user = message.mentions.members.first();
-        if(args[0] && mute_user){
+ if(cmd ===`${prefix}mute`){
+    let mute_user = message.mentions.members.first();
+   if(args[0] && mute_user){
 
-        let tárgy = "";
-        let idő;
+   let tárgy = "";
+   let idő;
 
-        idő = args[1];
-        tárgy = args[2];
+   idő = args[1];
+   tárgy = args[2];
 
-        if(!idő){
-            return message.reply("Kérlek add meg mennyi időre szeretnéd némítani!")
-        }
-        if(!tárgy){
-            return message.reply("Kérlek adj meg egy indokot!")
-        }
-
-
-            if(mute_user){
-
-                let mute_role = "999690858486055053";
-
-                
-                mute_user.roles.add(mute_role);
-                message.channel.send(`${mute_user} le lett mutolva!\n ennyi időre:${ms(ms(idő), {long: true})}\n indok:${tárgy}`);
-
-        
-
-            }
-
-            let mute_role = "999690858486055053";
-
-            setTimeout(function () {
-                mute_user.roles.remove(mute_role);
+   if(!idő){
+       return message.reply("Kérlek add meg mennyi időre szeretnéd némítani!")
+   }
+   if(!tárgy){
+       return message.reply("Kérlek adj meg egy indokot!")
+   }
 
 
+       if(mute_user){
 
+           let mute_role = "999690858486055053";
+           let tag_role = "1005071146728833114";
 
+           
+           mute_user.roles.add(mute_role);
+           mute_user.roles.remove(tag_role);
+           message.channel.send(`${mute_user} le lett mutolva!\n ennyi időre:${ms(ms(idő), {long: true})}\n indok:${tárgy}`);
 
-            }, ms(args[1]));
-        
+   
+
+       }
+
+       let mute_role = "999690858486055053";
+       let tag_role = "1005071146728833114";
+
+       setTimeout(function () {
+           mute_user.roles.remove(mute_role);
+           mute_user.roles.add(tag_role);
 
 
 
 
 
-
-
-        }
-
-
+       }, ms(args[1]));
+   
 
 
 
-    }
+
+
+
+
+   }
+
+
+
+
+
+}
 
     if(cmd ===`${prefix}javaslat`){
         message.channel.bulkDelete(1);
