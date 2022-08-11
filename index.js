@@ -636,7 +636,7 @@ if(cmd ===`${prefix}luck`){
         let roleEmbed = new Discord.MessageEmbed()
         .setTitle("Értesítések")
         .setColor("YELLOW")
-        .setDescription("🎉**Giveaway** rang\n 🛠**Frissítések** rang\n 📢**Hírek** rang")
+        .setDescription("🎉**Giveaway** ping\n 🛠**Frissítések** ping\n 📢**Hírek** ping")
         .setTimestamp(message.createdAt)
         .setFooter(message.author.username)
     
