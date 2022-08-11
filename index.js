@@ -57,52 +57,53 @@ client.on("message", async message =>{
     
     
  if(cmd ===`${prefix}wasted`){
+    const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+   
 
-        const user2 = message.mentions.users.first() || message.client.users.cache.get(args[0])
-       
-
-        if (args[0] && user2) {
-        const Data = await srod.Wasted({Image: user2.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
-     
-        message.channel.send(Data);
-         } else {
-             let wasted_Embed = new Discord.MessageEmbed()
-             .setAuthor("Hiba | Helyes Használat")
-             .setColor("YELLOW")
-             .setDescription(`\`!wasted @<user>\``)
-             .setTimestamp(message.createdAt)
-             .setFooter(message.author.username)
-     
-             message.channel.send(wasted_Embed);
-             } 
-     }
+    if (args[0] && user1) {
+    const Data = await srod.Wasted({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+    message.channel.send(Data);
+     } else {
+        const Data = await srod.Wasted({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+         message.channel.send(Data);
+         } 
+ }
      
     
     
      
        if(cmd ===`${prefix}glass`){
+    const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+   
 
-const user = message.mentions.users.first() || message.client.users.cache.get(args[0])
+    if (args[0] && user1) {
+    const Data = await srod.Glass({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+    message.channel.send(Data);
+     } else {
+        const Data = await srod.Glass({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+         message.channel.send(Data);
+         } 
+ }
+    
+      if(cmd ===`${prefix}bagett`){
+        const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
        
-
-if (args[0] && user) {
-const Data = await srod.Glass({Image: user.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
-
-message.channel.send(Data);
- } else {
-     let wasted_Embed = new Discord.MessageEmbed()
-     .setAuthor("Hiba | Helyes használat")
-     .setColor("YELLOW")
-     .setDescription(`\`!glass @<user>\``)
-     .setTimestamp(message.createdAt)
-     .setFooter(message.author.username)
-
-     message.channel.send(wasted_Embed);
-     } 
-
-
-
-    }
+    
+        if (args[0] && user1) {
+        const Data = await srod.Baguette({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+     
+        message.channel.send(Data);
+         } else {
+            const Data = await srod.Baguette({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+     
+             message.channel.send(Data);
+             } 
+     }
+    
 
     
     if(cmd === `${prefix}szavazás`){
@@ -143,25 +144,49 @@ message.channel.send(Data);
         random.dog().then(url => message.channel.send(url)).catch(err => console.log(err.message));
      }
     
-    if(cmd ===`${prefix}gay`){
-        const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
-       
+ if(cmd ===`${prefix}gay`){
+    const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+   
 
-        if (args[0] && user1) {
-        const Data = await srod.Gay({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
-     
-        message.channel.send(Data);
-         } else {
-             let wasted_Embed = new Discord.MessageEmbed()
-             .setAuthor("Hiba | Helyes Használat")
-             .setColor("YELLOW")
-             .setDescription(`\`!gay @<user>\``)
-             .setTimestamp(message.createdAt)
-             .setFooter(message.author.username)
-     
-             message.channel.send(wasted_Embed);
-             } 
-     }
+    if (args[0] && user1) {
+    const Data = await srod.Gay({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+    message.channel.send(Data);
+     } else {
+        const Data = await srod.Gay({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+         message.channel.send(Data);
+         } 
+ }
+     if(cmd ===`${prefix}triggered`){
+    const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+   
+
+    if (args[0] && user1) {
+    const Data = await srod.Triggered({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+    message.channel.send(Data);
+     } else {
+        const Data = await srod.Triggered({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+         message.channel.send(Data);
+         } 
+ }
+    if(cmd ===`${prefix}threats`){
+    const user1 = message.mentions.users.first() || message.client.users.cache.get(args[0])
+   
+
+    if (args[0] && user1) {
+    const Data = await srod.Threats({Image: user1.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+    message.channel.send(Data);
+     } else {
+        const Data = await srod.Threats({Image: message.author.displayAvatarURL({ dynamic: "true", size: 1024, format: "png"}), Color: color})
+ 
+         message.channel.send(Data);
+         } 
+ }
+
       
     
     
