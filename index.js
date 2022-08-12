@@ -9,7 +9,6 @@ const ms = require("ms");
 const color = "RANDOM"
 const srod = require("srod-v2");
 const random = require("catsndogs");
-const money = require("./money.json");
 
 const { Player } = require("discord-player");
 const player = new Player(client);
@@ -23,6 +22,7 @@ client.player = player;
 const fs = require("fs");
 
  ////////////////|| ECONOMY ||/////////////////////
+const money = require("./money.json");
 
     if(!money[message.author.id]) {
         money[message.author.id] = {
