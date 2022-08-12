@@ -9,6 +9,7 @@ const ms = require("ms");
 const color = "RANDOM"
 const srod = require("srod-v2");
 const random = require("catsndogs");
+const money = require("./money.json");
 
 const { Player } = require("discord-player");
 const player = new Player(client);
@@ -54,6 +55,112 @@ client.on("message", async message =>{
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
+    
+    
+    
+    
+    
+    
+    ////////////////|| ECONOMY ||/////////////////////
+
+    if(!money[message.author.id]) {
+        money[message.author.id] = {
+            money: 100,
+            user_id: message.author.id
+
+        };
+    }
+    fs.writeFile("./money.json", JSON.stringify(money), (err) => {
+        if(err) console.log(err);
+    });
+    let sajátpénz = money[message.author.id].money;
+
+
+
+    if(cmd === `${prefix}shop`){
+        let ShopEmbed = new Discord.MessageEmbed()
+            .setTitle("Bolt")
+            .setDescription(`VIP rang ${prefix}vasarolvip (15000 érme)`)
+            .setColor("YELLOW")
+            .setTimestamp(message.createdAt)
+            .setFooter(message.author.username)
+
+            message.channel.send(ShopEmbed);
+    }
+
+
+
+    if(cmd === `${prefix}vasarolvip`){
+        let viprang_id = "1007360671916249198"
+
+        let price = "15000";
+        if(message.member.roles.cache.has(viprang_id)) return message.reply("*Neked ez a rang megvan!*");
+        if(selfMoney < price) return message.reply(`Erre a rangra nincs pénzed! Jelenleg ${sajátpénz} érméd van.`)
+
+        money[message.author.id] = {
+            money: sajátpénz - parseInt(price),
+            user_id: message.author.id
+        }
+
+        message.guild.member(message.author.id).roles.add(viprang_id);
+
+        let vasarlos_Embed = new Discord.MessageEmbed()
+        .setTitle("Vásárlás")
+        .setColor("YELLOW")
+        .setDescription("Sikeres vásárlás, megvetted a VIP rangot")
+        .setTimestamp(message.createdAt)
+        .setFooter(message.author.username)
+
+        message.channel.send(vasarlos_Embed);
+
+    }
+
+if(cmd === `${prefix}work`){
+    let cooldown_id = "1005532272742649926";
+    let cooldown_time = "3600";
+
+    if(message.member.roles.cache.has(cooldown_id)) return message.reply(`Ezt a parancsot ${cooldown_time} percenként használhatod!`)
+
+    message.member.roles.add(cooldown_id)
+
+    let üzenetek = ["Kiraboltál egy csövest,ezért", "Az égből leesett egy zsák pénz, ezért", "Elsétáltál a munkahelyedig, ezért"]
+    let random_üzenet = Math.floor(Math.random()*üzenetek.length)
+
+    let random_pénz = Math.floor(Math.random()*1000 +1)
+
+    let workEmbed = new Discord.MessageEmbed()
+    .setTitle("Munka!")
+    .setDescription(`${üzenetek[random_üzenet]} kaptál **${random_pénz}** érmét!`)
+    .setColor("YELLOW")
+    .setTimestamp(message.createdAt)
+    .setFooter(message.author.username)
+    message.channel.send(workEmbed)
+
+    money[message.author.id] = {
+        money: sajátpénz + random_pénz,
+        user_id: message.author.id
+}
+
+setTimeout(() => {
+    message.member.roles.remove(cooldown_id)
+}, 1000 * cooldown_time)
+}
+
+if(cmd ===`${prefix}bal`){
+    let money = new Discord.MessageEmbed()
+    .setTitle("Bal")
+    .setColor("YELLOW")
+    .setDescription(`Érméd: **${sajátpénz}**`)
+    .setTimestamp(message.createdAt)
+    .setFooter(message.author.username)
+
+    message.channel.send(money);
+}
+
+//////////////////////////////////////////////////
+    
+    
+    
     
     
  if(cmd ===`${prefix}wasted`){
