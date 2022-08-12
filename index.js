@@ -107,7 +107,7 @@ client.on("message", async message =>{
 
         let price = "15000";
         if(message.member.roles.cache.has(viprang_id)) return message.reply("*Neked ez a rang megvan!*");
-        if(selfMoney < price) return message.reply(`Erre a rangra nincs pénzed! Jelenleg ${sajátpénz} érméd van.`)
+        if(sajátpénz < price) return message.reply(`Erre a rangra nincs pénzed! Jelenleg ${sajátpénz} érméd van.`)
 
         money[message.author.id] = {
             money: sajátpénz - parseInt(price),
