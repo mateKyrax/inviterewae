@@ -20,7 +20,7 @@ client.player = player;
 
 
 const fs = require("fs");
-const money = require("../package.json");
+const money = require("./money.json");
 
  
     
