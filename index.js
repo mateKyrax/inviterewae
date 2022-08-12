@@ -22,46 +22,7 @@ client.player = player;
 
 const fs = require("fs");
 
-//////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-let botname = "InviteReward"
-
-client.on("ready", async() => {
-    console.log(`${client.user.username} elindult!`)
-
-    let státuszok = [
-        "Készítő: Yuma"
-    ]
-
-    setInterval(function() {
-        let status = státuszok[Math.floor(Math.random()* státuszok.length)]
-
-        client.user.setActivity(status, {type: "WATCHING"})
-    }, 3000)
-})
-
-client.on("message", async message =>{ 
-    let MessageArray = message.content.split(" ");
-    let cmd = MessageArray[0];
-    let args = MessageArray.slice(1);
-    let prefix = botconfig.prefix;
-
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    
-    
-    
-    
-    
-    
-    ////////////////|| ECONOMY ||/////////////////////
+ ////////////////|| ECONOMY ||/////////////////////
 
     if(!money[message.author.id]) {
         money[message.author.id] = {
@@ -159,6 +120,42 @@ if(cmd ===`${prefix}bal`){
 
 //////////////////////////////////////////////////
     
+
+
+
+
+let botname = "InviteReward"
+
+client.on("ready", async() => {
+    console.log(`${client.user.username} elindult!`)
+
+    let státuszok = [
+        "Készítő: Yuma"
+    ]
+
+    setInterval(function() {
+        let status = státuszok[Math.floor(Math.random()* státuszok.length)]
+
+        client.user.setActivity(status, {type: "WATCHING"})
+    }, 3000)
+})
+
+client.on("message", async message =>{ 
+    let MessageArray = message.content.split(" ");
+    let cmd = MessageArray[0];
+    let args = MessageArray.slice(1);
+    let prefix = botconfig.prefix;
+
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    
+    
+    
+    
+    
+    
+   
     
     
     
