@@ -80,6 +80,27 @@ client.on("message", async message =>{
     }
 
 
+   if(cmd ===`${prefix}moneygive`){
+    let give_user = message.mentions.members.first();
+    if(args[0] && give_user){
+
+        let moneygive = new Discord.MessageEmbed()
+        .setTitle("Give")
+        .setColor("YELLOW")
+        .setDescription(`${message.author.username} adott pénzt ${give_user.user.username} nak/nek`)
+        .setTimestamp(message.createdAt)
+        .setFooter(message.author.username)
+
+        message.channel.send(moneygive);
+
+        money[message.author.id] = {
+            money: sajátpénz + 15000,
+            user_id: give_user.id
+        }
+    }
+}
+ 
+ 
 
     if(cmd === `${prefix}vasarolvip`){
         let viprang_id = "1007360671916249198"
