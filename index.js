@@ -81,6 +81,7 @@ client.on("message", async message =>{
 
 
    if(cmd ===`${prefix}moneygive`){
+     if(message.member.hasPermission("MANAGE_MESSAGES")){
     let give_user = message.mentions.members.first();
     if(args[0] && give_user){
 
@@ -99,7 +100,7 @@ client.on("message", async message =>{
         }
     }
 }
- 
+   }
  
 
     if(cmd === `${prefix}vasarolvip`){
