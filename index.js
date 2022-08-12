@@ -20,7 +20,7 @@ client.player = player;
 
 
 const fs = require("fs");
-const money = require("./money.json");
+const money = require("../package.json");
 
     if(!money[message.author.id]) {
         money[message.author.id] = {
