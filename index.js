@@ -107,7 +107,7 @@ client.on("message", async message =>{
     }
 
 if(cmd === `${prefix}work`){
-    let cooldown_id = "1005532272742649926";
+    let cooldown_id = "1006825524129185802";
     let cooldown_time = "3600";
 
     if(message.member.roles.cache.has(cooldown_id)) return message.reply(`Ezt a parancsot ${cooldown_time} percenként használhatod!`)
