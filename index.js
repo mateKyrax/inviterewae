@@ -20,8 +20,6 @@ client.player = player;
 
 
 const fs = require("fs");
-
- ////////////////|| ECONOMY ||/////////////////////
 const money = require("./money.json");
 
     if(!money[message.author.id]) {
